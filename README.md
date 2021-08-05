@@ -3,7 +3,7 @@
 Responsive web page design built with HTML, CSS and GSAP animation effects.
 
 ### Final Result
-<img src="Images/final.png" alt="Web Version"/>
+<img src="Images/Final.png" alt="Web Version"/>
 
 ## 🚀 Starting
 
