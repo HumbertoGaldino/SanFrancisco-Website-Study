@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" type="imagem/png" href="Images/icon.png" />
+    <title>San Francisco</title>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">San Francisco</a>
+            </div>
+            <div class="hamburguer-menu">
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Tours</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Preços</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Localizações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Sobre</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-clipped">
+            <div class="hero-textbox">
+                <h1 class="main-heading">San Francisco</h1>
+                <h2 class="sub-heading">Saiba mais sobre nossas incriveis atrações turísticas</h2>
+                <a href="#" class="button">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script>
+        const mainNav = document.querySelector('.main-nav');
+        const navList = document.querySelector('.nav-list');
+        const habuguerMenu = document.querySelector('.hamburguer-menu');
+
+        habuguerMenu.addEventListener('click', function (){
+            mainNav.classList.toggle('open');
+        })
+
+        gsap.fromTo('.hero-clipped', {scaleX:0}, {duration: 1, scaleX:1});
+        gsap.fromTo('.logo', {x: -200, opacity:0}, {duration: 1, delay: .5, x: 0, opacity: 1});
+        gsap.fromTo('.hamburguer-menu', {x: 200, opacity:0}, {duration: 1, delay: .8, x: 0, opacity: 1});
+        gsap.fromTo('.hero-textbox', {yPercent: 40, opacity:0}, {duration: 1, delay: 1.3, yPercent: -50, opacity: 1});
+    </script>
+</body>
+</html>
